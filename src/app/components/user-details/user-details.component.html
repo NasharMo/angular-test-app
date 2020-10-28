@@ -1,0 +1,20 @@
+
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <button mat-icon-button color="primary" aria-label="Back" (click)="goBack()">
+          <mat-icon>home</mat-icon>
+        </button>
+    </div>
+    </div>
+  <mat-card style="height: 400px;width: 400px;" *ngIf="user.avatar">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{user.first_name}}</mat-card-title>
+      <mat-card-subtitle>{{user.last_name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="user.avatar" [alt]="user.first_name" >
+    <mat-card-content>
+      {{user.email}}
+    </mat-card-content>
+  </mat-card>
+
